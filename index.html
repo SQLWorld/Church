@@ -1149,7 +1149,19 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
   src="https://copilotstudio.microsoft.com/environments/Default-ee7819b9-333e-41e4-b007-5c0ae8a0a195/bots/Default_registrationSystem/webchat?__version__=2" 
   frameborder="0">
 </iframe>
-
+<script>
+  document.getElementById('chatbot-toggle').addEventListener('click', function () {
+    const iframe = document.getElementById('chatbot-iframe');
+    const button = document.getElementById('chatbot-toggle');
+    if (iframe.style.display === 'none') {
+      iframe.style.display = 'block';
+      button.textContent = '✖';
+    } else {
+      iframe.style.display = 'none';
+      button.textContent = '💬';
+    }
+  });
+</script>
     
 </body>
 </html>
